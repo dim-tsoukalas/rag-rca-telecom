@@ -7,7 +7,7 @@ from llama_index.core import StorageContext
 import chromadb
 
 # configure global settings
-Settings.llm = Ollama(model="llama3.1:8b", request_timeout=120.0)
+Settings.llm = Ollama(model="llama3.2:3b", request_timeout=120.0)
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
 
 # dummy telecom documents
