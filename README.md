@@ -23,24 +23,8 @@ source-cited root cause analysis in seconds:
 ---
 
 ## Architecture
-Real 5G Dataset (188k rows)
-│
-▼
-Fault Injector (Python)
-└── 3 fault types: RSRP drop, handover failure, throughput collapse
-│
-▼
-RAG Pipeline
-├── Embeddings: BGE-M3 (HuggingFace, local)
-├── Vector DB: ChromaDB (persistent, local)
-├── LLM: Llama 3.2 3B via Ollama (local, no cloud)
-└── Framework: LlamaIndex
-│
-▼
-Gradio UI
-├── Chat interface with structured RCA answers
-├── Retrieved sources panel (KPI logs + incident reports)
-└── KPI chart with fault type filter
+
+![System architecture](docs/architecture.png)
 
 ## Dataset
 
@@ -78,18 +62,7 @@ Fully local — no OpenAI API, no cloud costs.
 ---
 
 ## Project structure
-rag-rca-telecom/
-├── data/
-│   ├── raw/                   # 5G dataset CSVs (download separately)
-│   ├── processed/             # fault-injected labeled dataset
-│   └── incident_reports/      # 15 NOC incident report markdown files
-├── src/
-│   ├── fault_injector.py      # injects labeled faults into KPI data
-│   ├── ingest.py              # builds ChromaDB vector indexes
-│   └── query.py               # RAG query engine (CLI)
-├── app.py                     # Gradio UI
-├── requirements.txt
-└── README.md
+![Project structure](docs/project_structure.png)
 
 ---
 
