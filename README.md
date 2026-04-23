@@ -2,7 +2,7 @@
 
 A RAG-powered NOC assistant that diagnoses faults in 5G Radio Access Networks
 using real KPI telemetry and structured incident reports. Built as a portfolio
-project targeting telecom AI roles (Ericsson, Nokia, Telefónica).
+project.
 
 ## Demo
 
